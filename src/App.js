@@ -1,43 +1,36 @@
 import React, { Component } from 'react';
-import data from './data';
-import BeerSection from './BeerSection';
+import { Route, Link } from 'react-router-dom';
+import BeerHome from './BeerHome';
 import './style/App.css';
 
+const breweries = '/breweries';
+
 class App extends Component {
-  state = {
-    breweries: data.breweries.map(brewery => {
-      return {
-        visible: false,
-        ...brewery,
-      };
-    })
-  }
-
-  handleCollapse = name => {
-    this.setState({breweries: this.state.breweries.map(brewery => {
-      return {
-        ...brewery,
-        visible: brewery.name === name ? !brewery.visible : false,
-      }
-    })})
-  }
-
   render() {
-    const { breweries } = this.state;
     return (
       <div>
         <div className="background" />
-        <div className="container">
-          <header className="title heading">
-            A Guide to Beer Tasting in Wellington
-          </header>
-          {breweries.map(brewery => (
-            <BeerSection brewery={brewery} onClick={this.handleCollapse}/>
-          ))}
+        <div className="container base">
+          
+          <Route exact path='/' component={mainHeading}/>
+          <Route exact path={breweries} component={BeerHome}/>
         </div>
       </div>
     );
   }
+}
+
+const mainHeading = () => {
+  return (
+    <div>
+      <header className="title heading">
+        Happy Birthday, Judge!
+      </header>
+      <div>
+        <Link to={breweries}>Enter</Link>
+      </div>
+    </div>
+  )
 }
 
 export default App;

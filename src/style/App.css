@@ -1,5 +1,6 @@
 body {
-  font-size: 1.8em;
+  font-size: 3em;
+  font-family: 'Roboto', sans-serif;
 }
 
 div {
@@ -17,18 +18,18 @@ div {
 }
 
 .heading {
-  font-size: 1.2em
+  font-size: 1.2em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .title {
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 1em 2em 1em 2em;
 }
 
 .brewery-section {
   padding: 15px;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 .brewery-heading {
@@ -38,18 +39,10 @@ div {
 .beer-section {
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
-.container {
-  padding-top: 10px;
-  margin: 0 10vw 0 10vw;
+.base {
+  padding: 0.2em 1em 0.2em 1em;
   background-color: #31353f;
-  height: 100vh;
-}
-
-@media only screen and (max-width: 500px) {
-  .container {
-    margin: 0 50px 0 50px;
-  }
 }
