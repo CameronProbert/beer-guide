@@ -1,6 +1,7 @@
 body {
   font-size: 3em;
   font-family: 'Roboto', sans-serif;
+  background-color: #282c34;
 }
 
 div {
@@ -9,24 +10,16 @@ div {
   margin: 0;
 }
 
-.background {
-  z-index: -999;
-  background-color: #282c34;
-  left: 0%;
-  top: 0%;
-  height: 100vh;
-  width: 100vw;
-}
-
 .heading {
   font-size: 1.2em;
   font-family: 'Open Sans', sans-serif;
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   text-align: center;
-  margin: 1em 2em 1em 2em;
+  margin: 0.3em 2em 0.3em 2em;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .brewery-section {
@@ -46,6 +39,10 @@ div {
 
 .description {
   font-weight: lighter;
+}
+
+.heading-description {
+  text-align: justify;
 }
 
 .base {
@@ -75,4 +72,13 @@ a:visited {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+}
+
+img {
+  height: 10em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+  font-style: italic;
 }

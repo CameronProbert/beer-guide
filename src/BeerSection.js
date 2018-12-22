@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import Images from './images'
+import Image from './Image'
 import './style/App.css';
 
 import BeerHeader from './BeerHeader'
+
+const baseUrl = '/breweries'
 
 class BeerSection extends Component {
   render() {
@@ -9,6 +14,9 @@ class BeerSection extends Component {
     return (
       <div className='brewery-section'>
         <BeerHeader name={brewery.name} description={brewery.description}/>
+        {Images.filter(({name}) => 
+          name === brewery.name).map(image => 
+          <Image image={image}/>)}
         {brewery.beers && (
           <ul>
             {brewery.beers.map(beer => (
@@ -26,6 +34,12 @@ class BeerSection extends Component {
             ))}
           </ul>
         )}
+
+          <Link to={baseUrl}>
+            <header className="subtitle">
+              Back to breweries
+            </header>
+          </Link>
       </div>
     );
   }
