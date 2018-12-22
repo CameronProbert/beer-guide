@@ -2,6 +2,7 @@ const data = {
     breweries: [
         {
             name: 'Whistling Sisters',
+            description: "While you're here, make a note of all the other locally sourced options.",
             beers: [
                 {
                     name: 'XPA',
@@ -23,6 +24,7 @@ const data = {
         },
         {
             name: 'Fortune Favours',
+            description: 'Have a drink next to the brew.',
             beers: [
                 {
                     name: 'The Necromancer',
@@ -52,6 +54,7 @@ const data = {
         },
         {
             name: 'Heyday',
+            description: "Nice to sit in the sun and play cards. Don't get sunburnt!",
             beers: [
                 {
                     name: 'Moloko',
@@ -73,6 +76,7 @@ const data = {
         },
         {
             name: 'Garage Project',
+            description: "Here's some beers I don't think you'll have tried yet.",
             beers: [
                 {
                     name: 'Es Buah',
@@ -94,7 +98,7 @@ const data = {
         },
         {
             name: 'Husk',
-            description: `Excellent toilet facilities: not a beer, just a fact`,
+            description: `Excellent toilet facilities: not a beer, just a fact.`,
             beers: [
                 {
                     name: 'The Power of Voodoo',
