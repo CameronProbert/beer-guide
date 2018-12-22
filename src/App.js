@@ -12,7 +12,7 @@ class App extends Component {
         <div className="container base">
           
           <Route exact path='/' component={mainHeading}/>
-          <Route exact path={breweries} component={BeerHome}/>
+          <Route path={breweries} component={BeerHome}/>
         </div>
       </div>
     );
@@ -21,13 +21,22 @@ class App extends Component {
 
 const mainHeading = () => {
   return (
-    <div>
+    <div className="centre-align-contents">
       <header className="title heading">
         Happy Birthday, Judge!
       </header>
-      <div>
-        <Link to={breweries}>Enter</Link>
-      </div>
+      <p className='description'>Would have loved to catch you last weekend, unfortunately 
+        I was stuck in Mike's company the whole time instead, so I
+        figured I'd taste some brews and drink my way to a state
+        where he looked pretty. So because I couldn't do it with you,
+        I have come up with an alternate tasting guide for you as you
+        do the tour yourself!</p>
+      <p>- Love from Cam</p>
+      <Link to={breweries}>
+        <button onClick={e => e.stopPropagation()} className='enter-button btn btn-primary'>
+          Enter
+        </button>
+      </Link>
     </div>
   )
 }

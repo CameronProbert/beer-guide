@@ -12,15 +12,17 @@ class BeerSection extends Component {
         {brewery.beers && (
           <ul>
             {brewery.beers.map(beer => (
-              <li><div className='beer-section'>
-                <span className='heading beer-heading'>
-                  {beer.name}
-                </span>
-                <br></br>
-                <span className='description beer-description'>
-                  {beer.description}
-                </span>
-              </div></li>
+              <li key={beer.name}>
+                <div className='beer-section'>
+                  <span className='heading beer-heading'>
+                    {beer.name}
+                  </span>
+                  <br></br>
+                  <span className='description beer-description'>
+                    {beer.description}
+                  </span>
+                </div>
+              </li>
             ))}
           </ul>
         )}

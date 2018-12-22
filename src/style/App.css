@@ -24,6 +24,7 @@ div {
 }
 
 .title {
+  font-size: 1.5em;
   text-align: center;
   margin: 1em 2em 1em 2em;
 }
@@ -43,7 +44,35 @@ div {
   font-size: 0.8em;
 }
 
+.description {
+  font-weight: lighter;
+}
+
 .base {
   padding: 0.2em 1em 0.2em 1em;
   background-color: #31353f;
+}
+
+a {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.enter-button {
+  font-weight: bold;
+  background-color: #31353f;
+  border-radius: 0.3em;
+  padding: 0.2em;
+  margin: 0.2em;
+  font-size: 2em;
+}
+
+.centre-align-contents {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
