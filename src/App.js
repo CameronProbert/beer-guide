@@ -8,8 +8,7 @@ const breweries = '/breweries';
 class App extends Component {
   render() {
     return (
-      <div>
-        <div className="background" />
+      <div className="background" >
         <div className="container base">
           
           <Route exact path='/' component={mainHeading}/>

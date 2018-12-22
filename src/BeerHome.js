@@ -21,27 +21,24 @@ class App extends Component {
     const { breweries } = this.state;
     return (
       <div>
-        <div className="background" />
-        <div className="container base">
           <header className="title heading">
-            <Link to="/">A Guide to Beer Tasting in Wellington</Link>
+            A Guide to Beer Tasting in Wellington
           </header>
-          <Route exact path={baseUrl} render={() => (
+          <Route path={baseUrl} render={() => (
             breweries.map(brewery => (
-              <Link to={`${baseUrl}/${brewery.name.replace(' ', '-').toLowerCase()}`}>
-                <BeerHeader key={brewery.name} name={brewery.name} description={brewery.description}/>
+              <Link key={brewery.name} to={`${baseUrl}/${brewery.name.replace(' ', '-').toLowerCase()}`}>
+                <BeerHeader name={brewery.name} description={brewery.description}/>
               </Link>
             )))}
           />
-          <Route path={`${baseUrl}/:brewery`} render={({match: {params}}) => {
+          <Route path={`${baseUrl}/:brewery`} render={({params}) => {
             breweries.filter(brewery => 
                 brewery.name.replace(' ', '-').toLowerCase() === params.brewery)
               .map(brewery => 
               (
-                <BeerSection brewery={brewery}/>
-            ))}}
-          />
-        </div>
+                <BeerSection key={brewery.name} brewery={brewery}/>
+              ))
+          }}/>
       </div>
     );
   }
